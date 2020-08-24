@@ -4,19 +4,27 @@
 * [Setup](#setup)
 
 ## General info
-This project is simple Lorem ipsum dolor generator.
+This project is simple kubernetes test with the requirements using Helm in operating system ubuntu.
 	
 ## Technologies
 Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+* Minikube version: 1.12.1
+* Helm version: 3.3.0
 	
 ## Setup
-To run this project, install it locally using npm:
+To run this project, install it locally using Minikube:
 
 ```
-$ cd ../lorem
-$ npm install
-$ npm start
+$ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
+  && chmod +x minikube
+$ mv minikube /usr/local/bin/
+```
+
+
+To run this project, install it locally using helm:
+
+```
+$ wget https://get.helm.sh/helm-v3.3.0-linux-amd64.tar.gz
+$ tar -zxvf helm-v3.0.0-linux-amd64.tar.gz
+$ mv linux-amd64/helm /usr/local/bin/
 ```
