@@ -32,3 +32,6 @@ Just try to run simple bash script
 ```
 $ sudo bash build.sh
 ```
+
+## How to access the project
+This project can access with hit domain pintu.test.org in your browser 
