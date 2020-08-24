@@ -17,3 +17,7 @@ docker push bernando/frontend
 
 # This command for install helm chart with name pintu
 cd .. && helm install pintu ./helm-pintu
+
+# This command for set minikube ip to domain pintu.test.org
+dns=`minikube ip`
+echo $dns  pintu.test.org > /etc/hosts
