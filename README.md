@@ -12,17 +12,16 @@ Project is created with:
 * Helm version: 3.3.0
 	
 ## Setup
-To run this project, install it locally using Minikube:
+To run this project, install it locally using Minikube and Helm:
 
+* Minikube
 ```
 $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
   && chmod +x minikube
 $ mv minikube /usr/local/bin/
 ```
 
-
-To run this project, install it locally using helm:
-
+* Helm
 ```
 $ wget https://get.helm.sh/helm-v3.3.0-linux-amd64.tar.gz
 $ tar -zxvf helm-v3.0.0-linux-amd64.tar.gz
