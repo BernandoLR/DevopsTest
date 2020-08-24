@@ -20,11 +20,11 @@ spec:
           image: "{{ .Values.image.repositoryBackend }}:{{ .Values.image.tag }}"
           ports:
           - containerPort: {{ .Values.templateBackend.container.port }}
-          resources:
-            limits:
-              cpu: "{{ .Values.resources.limits.cpu }}"
-            requests:
-              cpu: "{{ .Values.resources.limits.cpu }}"
+          # resources:
+          #   limits:
+          #     cpu: "{{ .Values.resources.limits.cpu }}"
+          #   requests:
+          #     cpu: "{{ .Values.resources.limits.cpu }}"
 
 ---
 
@@ -50,8 +50,8 @@ spec:
           image: "{{ .Values.image.repositoryFrontend }}:{{ .Values.image.tag }}"
           ports:
           - containerPort: {{ .Values.templateFrontend.container.port }}
-          resources:
-            limits:
-              cpu: "{{ .Values.resources.limits.cpu }}"
-            requests:
-              cpu: "{{ .Values.resources.limits.cpu }}"
+          # resources:
+          #   limits:
+          #     cpu: "{{ .Values.resources.limits.cpu }}"
+          #   requests:
+          #     cpu: "{{ .Values.resources.limits.cpu }}"
