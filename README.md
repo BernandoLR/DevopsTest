@@ -26,3 +26,9 @@ $ wget https://get.helm.sh/helm-v3.3.0-linux-amd64.tar.gz
 $ tar -zxvf helm-v3.0.0-linux-amd64.tar.gz
 $ mv linux-amd64/helm /usr/local/bin/
 ```
+
+* Bash script
+Just try to run simple bash script
+```
+$ bash build.sh
+```
