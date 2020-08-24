@@ -30,5 +30,5 @@ $ mv linux-amd64/helm /usr/local/bin/
 * Bash script
 Just try to run simple bash script
 ```
-$ bash build.sh
+$ sudo bash build.sh
 ```
