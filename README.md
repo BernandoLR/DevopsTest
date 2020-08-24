@@ -5,6 +5,7 @@ This project is simple kubernetes test with the requirements using Helm in opera
 Project is created with:
 * Minikube version: 1.12.1
 * Helm version: 3.3.0
+* Go : 1.14.1
 	
 ## Setup
 To run this project, install it locally using Minikube and Helm:
