@@ -36,4 +36,8 @@ $ sudo bash build.sh
 ```
 
 ## How to access the project
-This project can access with hit domain pintu.test.org in your browser 
+This project can access with hit domain pintu.test.org in your browser.
+
+Note :
+* if you want to use horizontal pod autoscale, just uncomment resources in deployment.yaml
+* Enviroment in this test, i just make difference pod name in metadata
