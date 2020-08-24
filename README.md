@@ -42,3 +42,4 @@ Note :
 * if you want to use horizontal pod autoscale, just uncomment resources in deployment.yaml
 * Enviroment in this test, i just make difference pod name in metadata
 * Please read build.sh and backup your file /etc/hosts if you set anything in /etc/hosts
+* in build.sh, i use my docker registry but you can use your docker registry
