@@ -1,8 +1,3 @@
-## Table of contents
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
-
 ## General info
 This project is simple kubernetes test with the requirements using Helm in operating system ubuntu.
 	
@@ -19,6 +14,9 @@ To run this project, install it locally using Minikube and Helm:
 $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
   && chmod +x minikube
 $ mv minikube /usr/local/bin/
+$ minikube start
+$ minikube addons enable metrics-server
+$ minikube addons enable ingress
 ```
 
 * Helm
