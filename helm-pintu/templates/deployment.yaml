@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "{{ .Values.metadataBackend.name }}"
+  labels:
+    name: "{{ .Values.metadataBackend.label.name }}"
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: "{{ .Values.templateBackend.label.name }}"
+  template:
+    metadata:
+      name: "{{ .Values.templateBackend.name }}"
+      labels:
+        name: "{{ .Values.templateBackend.label.name }}"
+    spec:
+      containers:
+        - name: "{{ .Values.templateBackend.container.name }}"
+          image: "{{ .Values.image.repositoryBackend }}:{{ .Values.image.tag }}"
+          ports:
+          - containerPort: {{ .Values.templateBackend.container.port }}
+          resources:
+            limits:
+              cpu: "{{ .Values.resources.limits.cpu }}"
+            requests:
+              cpu: "{{ .Values.resources.limits.cpu }}"
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "{{ .Values.metadataFrontend.name }}"
+  labels:
+    name: "{{ .Values.metadataFrontend.label.name }}"
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: "{{ .Values.templateFrontend.label.name }}"
+  template:
+    metadata:
+      name: "{{ .Values.templateFrontend.name }}"
+      labels:
+        name: "{{ .Values.templateFrontend.label.name }}"
+    spec:
+      containers:
+        - name: "{{ .Values.templateFrontend.container.name }}"
+          image: "{{ .Values.image.repositoryFrontend }}:{{ .Values.image.tag }}"
+          ports:
+          - containerPort: {{ .Values.templateFrontend.container.port }}
+          resources:
+            limits:
+              cpu: "{{ .Values.resources.limits.cpu }}"
+            requests:
+              cpu: "{{ .Values.resources.limits.cpu }}"

@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: "{{ .Values.service.metadataBackend.name }}"
+spec:
+  selector:
+    name: "{{ .Values.service.selectorBackend.name }}"
+  ports:
+    - port: {{ .Values.service.portBackend.port }}
+      targetPort: {{ .Values.service.portBackend.targetPort }}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: "{{ .Values.service.metadataFrontend.name }}"
+spec:
+  selector:
+    name: "{{ .Values.service.selectorFrontend.name }}"
+  ports:
+    - port: {{ .Values.service.portFrontend.port }}
+      targetPort: {{ .Values.service.portFrontend.targetPort }}
